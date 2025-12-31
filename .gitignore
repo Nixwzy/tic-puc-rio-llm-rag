@@ -1,3 +1,4 @@
 .env
 /.vscode
 /chroma_wiki
+__pycache__/

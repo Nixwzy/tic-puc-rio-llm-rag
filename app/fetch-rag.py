@@ -6,16 +6,9 @@ from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate
 load_dotenv()
 
-# necessario usar o modelo nesse codigo pelo fato dos vetores serem diferentes da openAI
-embeddings = OllamaEmbeddings(model="mxbai-embed-large") 
-vectordb = Chroma(
-    persist_directory="./chroma_wiki", 
-    embedding_function=embeddings,
-    collection_name="wikipedia_pt_rag"
-)
-retriever = vectordb.as_retriever(search_kwargs={"k": 4})
+from config import llm, get_retriever 
 
-llm = ChatOllama(model="llama3", temperature=0)
+retriever = get_retriever()
 
 qa_prompt = ChatPromptTemplate.from_template(
     "Você é um assistente factual. Use EXCLUSIVAMENTE o contexto para responder.\n"
