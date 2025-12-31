@@ -1,10 +1,10 @@
+# conteudo relacionado à aula 2
 import os
 from dotenv import load_dotenv
 from langchain_community.document_loaders import WikipediaLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_ollama import OllamaEmbeddings  # Mudança aqui
+from langchain_ollama import OllamaEmbeddings
 from langchain_community.vectorstores import Chroma
-
 load_dotenv()
 
 # 2.2 Coleta de páginas 
