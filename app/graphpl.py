@@ -57,5 +57,5 @@ app = graph.compile()
 
 # exemplo de uso
 result = app.invoke({"pergunta": "O que é LangChain?"})
-print("resposta", result["resposta"])
+print("resposta:", result["resposta"])
 print("fonte:", result["docs"][0].metadata["source"])

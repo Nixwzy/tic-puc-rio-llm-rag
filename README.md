@@ -10,5 +10,7 @@ This repository serves as a personal log and code storage for my progress in the
 * **Frontend:** Streamlit
 * **Environment Management:** Anaconda (Conda)
 
+<img src="public/image.png" alt="Fluxo do Grafo" width="500">
+
 ---
 Developed by Nixwzy as part of the AI development learning path.
